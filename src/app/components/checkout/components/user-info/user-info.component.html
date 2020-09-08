@@ -1,0 +1,28 @@
+<form [formGroup]="userInfoForm">
+  <div class="form-row">
+    <mat-form-field appearance="fill">
+      <mat-label>Имя <span class="required">(*)</span></mat-label>
+      <input type="text" formControlName="firstName" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Фамилия <span class="required">(*)</span></mat-label>
+      <input type="text" formControlName="lastName" matInput>
+    </mat-form-field>
+  </div>
+  <div class="form-row">
+    <mat-form-field appearance="fill">
+      <mat-label>Телефон <span class="required">(*)</span></mat-label>
+      <input type="tel" prefix="+7 " mask="(000) 000 00 00" formControlName="phone" matInput>
+    </mat-form-field>
+  </div>
+  <div class="form-row">
+    <mat-form-field appearance="fill">
+      <mat-label>Email <span class="required">(*)</span></mat-label>
+      <input type="email" formControlName="email" matInput>
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <button (click)="submit()" mat-raised-button color="primary" [disabled]="userInfoForm.invalid">Продолжить</button>
+  </div>
+</form>
