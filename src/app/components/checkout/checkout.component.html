@@ -1,0 +1,9 @@
+<mat-tab-group (selectedIndexChange)="tabIndexChanged($event)" [selectedIndex]="checkoutService.currentStep | async"
+               animationDuration="0" mat-align-tabs="start">
+  <mat-tab label="Основные данные">
+    <app-user-info [checkoutService]="checkoutService"></app-user-info>
+  </mat-tab>
+  <mat-tab [disabled]="(checkoutService.currentStep | async) !== checkoutSteps.DELIVERY" label="Адрес доставки">
+    <app-delivery [checkoutService]="checkoutService"></app-delivery>
+  </mat-tab>
+</mat-tab-group>
