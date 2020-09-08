@@ -4,7 +4,7 @@
 Clone the repository with git clone
 
 ```sh
-cd sberbanktt
+cd sberhealth
 npm i
 npm start
 ```
