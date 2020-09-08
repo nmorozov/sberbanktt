@@ -1,4 +1,4 @@
-# Sberbank
+# Sberhealth
 
 ## Quick start
 Clone the repository with git clone
